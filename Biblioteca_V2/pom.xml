@@ -11,7 +11,7 @@
     <groupId>com.egg</groupId>
     <artifactId>biblioteca</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Biblioteca_V2</name>
+    <name>Biblioteca_V3</name>
     <description>Proyecto de Biblioteca para Egg.</description>
     <properties>
         <java.version>1.8</java.version>
@@ -29,11 +29,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -45,6 +40,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
 
     </dependencies>
 
