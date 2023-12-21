@@ -126,8 +126,13 @@ public class UsuarioServicio implements UserDetailsService{
 
     }
 
-    
-    
 
-    
+    public Optional<Usuario> findById(String idUsuario) throws MiException {
+        try {
+            return usuarioRepositorio.findById(idUsuario).get();
+        } catch (Exception e) {
+            throw new MiException("No se encontró el usuario solicitado");
+        }
+
+    }
 }
