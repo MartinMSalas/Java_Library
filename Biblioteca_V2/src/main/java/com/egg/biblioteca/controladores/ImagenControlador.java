@@ -1,6 +1,7 @@
 package com.egg.biblioteca.controladores;
 
 import com.egg.biblioteca.entidades.Usuario;
+import com.egg.biblioteca.excepciones.MiException;
 import com.egg.biblioteca.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +20,10 @@ public class ImagenControlador {
     UsuarioServicio usuarioServicio;
 
     @GetMapping("/perfil/{idUsuario}")
-    public ResponseEntity<byte[]> imagenUsuario(@PathVariable String idUsuario){
+    public ResponseEntity<byte[]> imagenUsuario(@PathVariable String idUsuario) throws MiException {
 
         Optional<Usuario> usuario = usuarioServicio.findById(idUsuario);
-
+        return ResponseEntity.ok(usuario.get().getImagen().getContenido());
     }
 
 }

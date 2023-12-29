@@ -129,7 +129,7 @@ public class UsuarioServicio implements UserDetailsService{
 
     public Optional<Usuario> findById(String idUsuario) throws MiException {
         try {
-            return usuarioRepositorio.findById(idUsuario).get();
+            return usuarioRepositorio.findById(idUsuario);
         } catch (Exception e) {
             throw new MiException("No se encontró el usuario solicitado");
         }
