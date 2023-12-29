@@ -22,6 +22,7 @@ public class ImagenControlador {
     @GetMapping("/perfil/{idUsuario}")
     public ResponseEntity<byte[]> imagenUsuario(@PathVariable String idUsuario) throws MiException {
         System.out.println("idUsuario = " + idUsuario);
+        System.out.println("usuarioServicio = " + usuarioServicio);
         Optional<Usuario> usuario = usuarioServicio.findById(idUsuario);
         return ResponseEntity.ok(usuario.get().getImagen().getContenido());
     }
