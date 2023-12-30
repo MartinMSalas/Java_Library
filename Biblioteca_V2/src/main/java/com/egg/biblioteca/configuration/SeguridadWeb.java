@@ -1,4 +1,4 @@
-package com.egg.biblioteca;
+package com.egg.biblioteca.configuration;
 
 import com.egg.biblioteca.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
